@@ -9,20 +9,31 @@
 
 import 'package:flutter/widgets.dart';
 
+class $AssetsImagesGen {
+  const $AssetsImagesGen();
+
+  /// File path: assets/images/firebase.png
+  AssetGenImage get firebase =>
+      const AssetGenImage('assets/images/firebase.png');
+
+  /// List of all assets
+  List<AssetGenImage> get values => [firebase];
+}
+
 class $AssetsVectorsGen {
   const $AssetsVectorsGen();
 
-  /// File path: assets/vectors/Google__G__logo.svg.webp
-  AssetGenImage get googleGLogoSvg =>
-      const AssetGenImage('assets/vectors/Google__G__logo.svg.webp');
+  /// File path: assets/vectors/googleicon.svg
+  String get googleicon => 'assets/vectors/googleicon.svg';
 
   /// List of all assets
-  List<AssetGenImage> get values => [googleGLogoSvg];
+  List<String> get values => [googleicon];
 }
 
 class Assets {
   Assets._();
 
+  static const $AssetsImagesGen images = $AssetsImagesGen();
   static const $AssetsVectorsGen vectors = $AssetsVectorsGen();
 }
 
