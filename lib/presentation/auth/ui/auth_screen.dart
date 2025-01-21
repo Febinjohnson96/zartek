@@ -7,7 +7,11 @@ class AuthScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const AppScaffold(
-      child: Column(),
+      child: Column(
+        children: [
+          Text("auth"),
+        ],
+      ),
     );
   }
 }

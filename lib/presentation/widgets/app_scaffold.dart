@@ -7,7 +7,7 @@ class AppScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(padding: EdgeInsets.all(12), child: child),
+      body: SafeArea(child: Padding(padding: EdgeInsets.all(12), child: child)),
     );
   }
 }
