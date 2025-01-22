@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "526548189818-lu3jl2lljidot35ca8uh01dh8i9koat8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.zartek",
+            "certificate_hash": "830f576c642d51863f0ddcfcfe068e63dc732be3"
+          }
+        },
+        {
           "client_id": "526548189818-cl79r18ibhtcatb8bg9lqmdo9rts1328.apps.googleusercontent.com",
           "client_type": 3
         }

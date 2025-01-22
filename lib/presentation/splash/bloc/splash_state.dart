@@ -9,14 +9,13 @@ sealed class SplashState extends Equatable {
 
 final class SplashInitial extends SplashState {}
 
-final class SplashLoaded extends SplashState {
-  final bool isLoaded;
+final class SplashLoaded extends SplashState {}
 
-  const SplashLoaded({required this.isLoaded});
+final class SplashLoading extends SplashState {}
 
-  @override
-  List<Object> get props => [isLoaded];
-}
+final class SplashError extends SplashState {}
+
+final class AuthLoading extends SplashState {}
 
 final class AuthenticatedAccount extends SplashState {}
 

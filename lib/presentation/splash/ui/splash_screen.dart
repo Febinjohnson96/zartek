@@ -17,6 +17,8 @@ class SplashScreen extends StatelessWidget {
             context.go(RouteName.home);
           } else if (state is UnAuthenticatedAccount) {
             context.go(RouteName.auth);
+          } else if (state is SplashLoading) {
+            Center(child: const CircularProgressIndicator());
           }
         },
         child: Column(),

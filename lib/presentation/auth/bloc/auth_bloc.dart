@@ -27,6 +27,7 @@ class AuthBloc extends Bloc<AuthEvent, AuthState> {
         emit(AuthError());
       }
     } catch (e) {
+      AppLogger.errorlog(e.toString());
       emit(AuthError());
     }
 

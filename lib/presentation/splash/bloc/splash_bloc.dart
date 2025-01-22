@@ -15,6 +15,7 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
   final Authentication _authentication;
   void splashInitialEvent(
       SplashInitialEvent event, Emitter<SplashState> emit) async {
+    emit(SplashLoading());
     final user = await _authentication.userAuthenticationStatus();
     if (user != null) {
       await Future.delayed(const Duration(seconds: 2));
@@ -24,5 +25,6 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
       await Future.delayed(const Duration(seconds: 2));
       emit(UnAuthenticatedAccount());
     }
+    emit(SplashLoaded());
   }
 }
