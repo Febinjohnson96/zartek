@@ -11,7 +11,8 @@ class HomeUi extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) =>
-          HomeBloc(authentication: injector())..add(HomeLoadUserEvent()),
+          HomeBloc(authentication: injector(), homeRepo: injector())
+            ..add(HomeLoadUserEvent()),
       child: const HomeScreen(),
     );
   }

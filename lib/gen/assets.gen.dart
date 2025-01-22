@@ -16,8 +16,12 @@ class $AssetsImagesGen {
   AssetGenImage get firebase =>
       const AssetGenImage('assets/images/firebase.png');
 
+  /// File path: assets/images/placeholder.jpg
+  AssetGenImage get placeholder =>
+      const AssetGenImage('assets/images/placeholder.jpg');
+
   /// List of all assets
-  List<AssetGenImage> get values => [firebase];
+  List<AssetGenImage> get values => [firebase, placeholder];
 }
 
 class $AssetsVectorsGen {
