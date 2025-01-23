@@ -43,6 +43,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       onPressed: () => _scaffoldKey.currentState?.openDrawer(),
                       icon: Icon(Icons.menu),
                     ),
+                    Spacer(),
+                    IconButton(
+                      onPressed: () =>
+                          context.read<HomeBloc>().add(HomeLoadUserEvent()),
+                      icon: Badge(
+                          label: Text(
+                            '0',
+                            style: TextStyle(color: Colors.white, fontSize: 18),
+                          ),
+                          child: Icon(Icons.shopping_bag)),
+                    )
                   ],
                 ),
                 if (state is HomeLoading) ...[CircularProgressIndicator()],

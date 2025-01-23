@@ -14,3 +14,7 @@ class HomeLoadUserEvent extends HomeEvent {}
 class HomeLoadEvent extends HomeEvent {}
 
 class HomeLogoutEvent extends HomeEvent {}
+
+class UpdateItemCount extends HomeEvent {}
+
+class DecreaseItemCount extends HomeEvent {}

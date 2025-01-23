@@ -21,6 +21,14 @@ final class HomeLoaded extends HomeState {
   List<Object> get props => [user, categories];
 }
 
+final class HomeCartCount extends HomeState {
+  final int count;
+  const HomeCartCount({required this.count});
+
+  @override
+  List<Object> get props => [count];
+}
+
 final class HomeError extends HomeState {}
 
 final class HomeLogout extends HomeState {}

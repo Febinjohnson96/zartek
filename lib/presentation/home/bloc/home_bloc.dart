@@ -17,6 +17,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
         super(HomeInitial()) {
     on<HomeLoadUserEvent>(_homeloadEvent);
     on<HomeLogoutEvent>(_logoutEvent);
+    on<UpdateItemCount>(_updateItemCount);
+    on<DecreaseItemCount>(_decreaseItemCount);
   }
   final Authentication _authentication;
   final HomeRepo _homeRepo;
@@ -26,6 +28,18 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     final homeData = await _homeRepo.getHomeData();
     if (user != null) {
       emit(HomeLoaded(user: user, categories: homeData));
+    }
+  }
+
+  void _updateItemCount(UpdateItemCount event, Emitter<HomeState> emit) {
+    if (state is HomeCartCount) {
+      emit(HomeCartCount(count: (state as HomeCartCount).count + 1));
+    }
+  }
+
+  void _decreaseItemCount(DecreaseItemCount event, Emitter<HomeState> emit) {
+    if (state is HomeCartCount) {
+      emit(HomeCartCount(count: (state as HomeCartCount).count - 1));
     }
   }
 
