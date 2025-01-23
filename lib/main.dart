@@ -7,8 +7,8 @@ import 'package:zartek/injector.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  initializeInjector();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  await initializeInjector();
   runApp(const MyApp());
 }
 

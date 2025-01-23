@@ -24,7 +24,14 @@ class GoogleAuthenticationButton extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            SvgPicture.asset(Assets.vectors.googleGLogoSvg.path),
+            Container(
+                height: 40.h,
+                decoration:
+                    BoxDecoration(shape: BoxShape.circle, color: Colors.white),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: SvgPicture.asset(Assets.vectors.googleicon),
+                )),
             SizedBox(
               width: 20.w,
             ),
